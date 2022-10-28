@@ -1,6 +1,8 @@
 # Lamp Backend Application
 
-Backend Express application for frontend React JS applicaton - Lamp.  Lamp frontend code can be viewed here: https://github.com/jpswt/LAMP_APP
+Backend Express application for React JS applicaton: Lamp.  
+
+Frontend code can be viewed here: https://github.com/jpswt/LAMP_APP
 
 Live Demo can be viewed here: https://lamp-final.herokuapp.com/
 
