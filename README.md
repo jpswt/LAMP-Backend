@@ -17,3 +17,4 @@ Live Demo can be viewed here: https://lamp-final.herokuapp.com/
 ## Technologies Used
 - Express.js
 - Node.js
+- MySQL Database
