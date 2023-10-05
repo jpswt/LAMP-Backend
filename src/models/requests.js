@@ -2,14 +2,14 @@ const helper = require('../helper/promisify');
 
 const sentVolRequests = (userName) => {
 	let sql =
-		'select users1.name, org_id, start_date, start_time, time_span, message, created_on, accepted from request join users1 on request.org_id = users1.id where vol_username = ? order by created_on desc';
-	// 'select users1.name, org_id, start_time, time_span, message, created_on, accepted from request join users1 on request.vol_username = users1.username where vol_username = ? order by created_on desc';
+		'select users.name, org_id, start_date, start_time, time_span, message, created_on, accepted from request join users on request.org_id = users.id where vol_username = ? order by created_on desc';
+	// 'select users.name, org_id, start_time, time_span, message, created_on, accepted from request join users on request.vol_username = users.username where vol_username = ? order by created_on desc';
 	return helper.promisify(sql, userName);
 };
 
 const receivedOrgRequests = (userId) => {
 	let sql =
-		'select request.id, users1.username, users1.name, users1.email, start_date, start_time, time_span, message, created_on, accepted from request join users1 on request.vol_username = users1.username where org_id = ? order by created_on desc';
+		'select request.id, users.username, users.name, users.email, start_date, start_time, time_span, message, created_on, accepted from request join users on request.vol_username = users.username where org_id = ? order by created_on desc';
 	return helper.promisify(sql, userId);
 };
 
